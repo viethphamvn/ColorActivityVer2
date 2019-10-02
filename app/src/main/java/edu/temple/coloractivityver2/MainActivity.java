@@ -22,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
         spinner.setAdapter(new ColorAdapter(this, colors.length, colors));
 
+        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                
+            }
+        });
+
 
 
     }
