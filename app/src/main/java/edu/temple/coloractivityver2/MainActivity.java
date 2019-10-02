@@ -16,22 +16,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] colors = {"CYAN","BLUE","RED","BLACK","GRAY","GREEN","MAGENTA","WHITE","YELLOW","PURPLE"};
+        final String[] colors = {"Select a color", "CYAN","BLUE","RED","BLACK","GRAY","GREEN","MAGENTA","WHITE","YELLOW","PURPLE"};
 
         Spinner spinner = findViewById(R.id.spinner);
 
         spinner.setAdapter(new ColorAdapter(this, colors.length, colors));
+        spinner.setSelection(0,false);
 
-        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Intent launchCanvas = new Intent(MainActivity.this, CanvasActivity.class);
-                launchCanvas.putExtra("background", view.getContext().toString());
+                launchCanvas.putExtra("background", colors[position]);
                 startActivity(launchCanvas);
             }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
         });
-
-
-
     }
 }
