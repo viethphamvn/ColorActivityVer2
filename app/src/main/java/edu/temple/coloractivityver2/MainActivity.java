@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                
+                Intent launchCanvas = new Intent(MainActivity.this, CanvasActivity.class);
+                launchCanvas.putExtra("background", view.getContext().toString());
+                startActivity(launchCanvas);
             }
         });
 
