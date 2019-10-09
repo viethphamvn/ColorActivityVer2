@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //test
-        final String[] colors = {"Select a color", "CYAN","BLUE","RED","BLACK","GRAY","GREEN","MAGENTA","WHITE","YELLOW","PURPLE"};
+
+        final String[] colors = getResources().getStringArray(R.array.color);
 
         Spinner spinner = findViewById(R.id.spinner);
 
