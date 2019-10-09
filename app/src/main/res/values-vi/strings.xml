@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+
+<resources>
+<string name="app_name">ColorActivityVer2</string>
+<string name="choose_color">Hãy chọn một màu nào đó!</string>
+<string-array name="color">
+    <item>Chọn một màu</item>
+    <item>Lục lam</item>
+    <item>Xanh dương</item>
+    <item>Đỏ</item>
+    <item>Đen</item>
+    <item>Xám</item>
+    <item>Xanh lục</item>
+    <item>Đỏ tươi</item>
+    <item>Trắng</item>
+    <item>Vàng</item>
+    <item></item>
+</string-array>
+<string name="canvas_welcome">Đây là tấm nền chưa có màu</string>
+</resources>
