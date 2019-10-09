@@ -14,7 +14,20 @@
     <item>Đỏ tươi</item>
     <item>Trắng</item>
     <item>Vàng</item>
-    <item></item>
+    <item>Tím</item>
+</string-array>
+<string-array name="color_default">
+    <item>Select a color</item>
+    <item>CYAN</item>
+    <item>BLUE</item>
+    <item>RED</item>
+    <item>BLACK</item>
+    <item>GRAY</item>
+    <item>GREEN</item>
+    <item>MAGENTA</item>
+    <item>WHITE</item>
+    <item>YELLOW</item>
+    <item>PURPLE</item>
 </string-array>
 <string name="canvas_welcome">Đây là tấm nền chưa có màu</string>
 </resources>

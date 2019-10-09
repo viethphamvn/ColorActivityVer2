@@ -13,11 +13,13 @@ public class ColorAdapter extends BaseAdapter {
     Context c;
     int count;
     String[] color;
+    String[] color_default;
 
     public ColorAdapter(Context context, int count, String[] color){
         this.c = context;
         this.count = count;
         this.color = color;
+        color_default = c.getResources().getStringArray(R.array.color_default);
     }
 
     @Override
@@ -61,7 +63,7 @@ public class ColorAdapter extends BaseAdapter {
         }
         view.setText(color[position]);
         try {
-            view.setBackgroundColor(Color.parseColor(view.getText().toString()));
+            view.setBackgroundColor(Color.parseColor(color_default[position]));
             view.setTextColor(Color.WHITE);
         }
         catch (Exception e){
